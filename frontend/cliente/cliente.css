@@ -1,0 +1,412 @@
+
+:root {
+    --vinho: #642b2b;
+    --creme: #fbf8d9;
+    --borda: #e8e3b5;
+    --texto: #642b2b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--texto);
+    background-color: var(--creme);
+}
+
+button, input {
+    font: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+/* CABEÇALHO */
+
+.cabecalho-cliente {
+    height: 76px;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--vinho);
+    color: var(--creme);
+}
+
+.marca {
+    color: #000;
+    text-decoration: none;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.marca small {
+    display: none;
+}
+
+.acoes-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.icone-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    min-height: 42px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 50px;
+    color: var(--creme);
+    background: transparent;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.icone-link:hover {
+    background-color: #7b3b3b;
+}
+
+/* TELA DE LOGIN E CADASTRO */
+
+.pagina-conta {
+    width: 100%;
+    min-height: calc(100vh - 76px);
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 38.2% 61.8%;
+    align-items: stretch;
+}
+
+/* IMAGEM DA LATERAL */
+
+.painel-lateral {
+    min-height: calc(100vh - 76px);
+    padding: 0;
+    display: block;
+    overflow: hidden;
+    border-radius: 0;
+    background-color: #8b6042;
+    background-image: url("../imagens/loja-ghibli.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Esconde os textos que existiam na versão anterior */
+.painel-lateral > * {
+    display: none;
+}
+
+/* FORMULÁRIO */
+
+.formulario-conta {
+    min-width: 0;
+    min-height: calc(100vh - 76px);
+    padding: 55px 6.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: none;
+    border-radius: 0;
+    background-color: var(--creme);
+    box-shadow: none;
+}
+
+.formulario-conta h2 {
+    margin: 8px 0 35px;
+    color: var(--vinho);
+    text-align: center;
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.subtitulo-form {
+    display: none;
+}
+
+/* CAMPOS */
+
+.campo {
+    margin-bottom: 55px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--vinho);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.campo input {
+    width: 100%;
+    height: 67px;
+    padding: 10px 22px;
+    border: 4px solid var(--borda);
+    border-radius: 40px;
+    outline: none;
+    color: var(--texto);
+    background-color: transparent;
+    font-size: 22px;
+}
+
+.campo input:focus {
+    border-color: #c8bd82;
+}
+
+.campo input[readonly] {
+    background-color: #eee9c9;
+}
+
+/* BOTÃO */
+
+.botao-principal {
+    display: block;
+    width: 34%;
+    min-width: 220px;
+    height: 62px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 12px;
+    color: var(--creme);
+    background-color: var(--vinho);
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.botao-principal:hover {
+    background-color: #7b3b3b;
+}
+
+.botao-principal:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+/* LINKS E AVISOS */
+
+.links-form {
+    margin-top: 25px;
+    text-align: center;
+    color: var(--texto);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.links-form a {
+    font-weight: bold;
+}
+
+.aviso-form {
+    min-height: 20px;
+    margin-top: 15px;
+    color: var(--vinho);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.aviso-form.erro {
+    color: #a33c36;
+}
+
+.aviso-form.sucesso {
+    color: #46643d;
+}
+
+.opcoes-perfil {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.opcoes-perfil button {
+    flex: 1;
+    min-width: 130px;
+    padding: 12px;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    color: var(--vinho);
+    background-color: #f4efcf;
+    cursor: pointer;
+}
+
+.opcoes-perfil button:hover {
+    background-color: #eae2b8;
+}
+
+/* RODAPÉ */
+
+.rodape-cliente {
+    display: none;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+    .pagina-conta {
+        grid-template-columns: 1fr;
+    }
+
+    .painel-lateral {
+        min-height: 280px;
+        background-position: center 45%;
+    }
+
+    .formulario-conta {
+        min-height: auto;
+        padding: 35px 8%;
+    }
+
+    .campo {
+        margin-bottom: 28px;
+    }
+
+    .campo label {
+        font-size: 28px;
+    }
+
+    .campo input {
+        height: 55px;
+    }
+
+    .formulario-conta h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho-cliente {
+        height: 65px;
+        padding: 0 16px;
+    }
+
+    .marca {
+        font-size: 28px;
+    }
+
+    .acoes-cabecalho {
+        gap: 5px;
+    }
+
+    .pagina-conta {
+        min-height: calc(100vh - 65px);
+    }
+
+    .painel-lateral {
+        min-height: 210px;
+    }
+
+    .formulario-conta {
+        padding: 28px 6%;
+    }
+
+    .campo label {
+        font-size: 24px;
+    }
+
+    .campo input {
+        height: 50px;
+    }
+
+    .botao-principal {
+        width: 75%;
+        min-width: 0;
+    }
+}
+/* Ajustes de tamanho - cadastro e login */
+
+/* Cabeçalho */
+.cabecalho-cliente {
+    min-height: 65px;
+    padding: 10px 30px;
+}
+
+.cabecalho-cliente h1 {
+    font-size: 30px;
+}
+
+.cabecalho-cliente a {
+    font-size: 16px;
+}
+
+/* Título do formulário */
+.formulario-conta h1 {
+    font-size: 34px;
+    margin-bottom: 25px;
+}
+
+/* Textos dos campos */
+.campo label {
+    font-size: 23px;
+    margin-bottom: 6px;
+}
+
+/* Campos de preenchimento */
+.campo input {
+    height: 48px;
+    padding: 10px 18px;
+    font-size: 16px;
+    border-width: 2px;
+}
+
+/* Espaçamento entre campos */
+.campo {
+    margin-bottom: 20px;
+}
+.opcoes-perfil[hidden] {
+    display: none !important;
+}
+
+.opcoes-perfil {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.65);
+    padding: 20px;
+}
+
+.conteudo-modal-perfil {
+    background: #fff;
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.conteudo-modal-perfil h2 {
+    margin-bottom: 15px;
+}
+
+.conteudo-modal-perfil p {
+    margin-bottom: 25px;
+}
+
+.conteudo-modal-perfil button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 13px;
+    cursor: pointer;
+}

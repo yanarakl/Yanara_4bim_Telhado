@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Restaurante Ghibli</title>
+
+    <link rel="stylesheet" href="../../geral.css">
+    <link rel="stylesheet" href="inicio.css">
+</head>
+
+<body onload="listarCategorias()">
+
+    <header>
+        <div class="logo">
+            <a href="../../index.html">
+                <img src="../../imagens/logo.png" alt="Logo do restaurante">
+            </a>
+        </div>
+
+        <nav class="navegacao">
+            <a href="../carrinho/carrinho.html" class="botaoCarrinho">
+                Carrinho (<span id="quantidadeCarrinho">0</span>)
+            </a>
+
+            <a href="../login/login.html" class="botaoLogin">
+                Entrar
+            </a>
+
+            <a href="../cadastro/cadastro.html" class="botaoCadastro">
+                Cadastrar-se
+            </a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="apresentacao">
+            <h1>Bem-vindo ao nosso restaurante!</h1>
+            <p>Descubra sabores inspirados no universo Studio Ghibli.</p>
+        </section>
+
+        <section id="categorias">
+            <p class="carregando">Carregando produtos...</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Restaurante Ghibli</p>
+        <p>Uma experiência inspirada em Studio Ghibli.</p>
+    </footer>
+
+    <script src="inicio.js"></script>
+
+</body>
+</html>

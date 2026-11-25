@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de pessoa</title>
+    <link rel="stylesheet" href="../base.css">
+</head>
+
+<body onload="listar()">
+
+    <header>
+        <h3>Cadastro de pessoa</h3>
+        <p>Gerencie as pessoas do sistema</p>
+
+        <section>
+            <nav>
+                <button onclick="abrirCategoria()">Categorias</button>
+                <button onclick="abrirProduto()">Produtos</button>
+                <button onclick="abrirPessoa()">Pessoas</button>
+                <button onclick="abrirPedido()">Pedidos</button>
+                <button onclick="abrirPagamento()">Pagamentos</button>
+                <button onclick="abrirMenu()">Menu</button>
+            </nav>
+        </section>
+    </header>
+
+    <main>
+
+        <section>
+            <h4>Dados da Pessoa</h4>
+
+            <label for="InputCpf">CPF</label>
+
+            <div class="linha-id">
+                <input type="text" name="InputCpf" id="InputCpf" placeholder="Ex: 12345678900">
+
+                <input type="button" value="Procure" id="btProcure" onclick="procure()">
+
+                <input type="button" value="Inserir" id="btInserir" onclick="inserir()" style="display:none;">
+
+                <input type="button" value="Alterar" id="btAlterar" onclick="alterar()" style="display:none;">
+
+                <input type="button" value="Excluir" id="btExcluir" onclick="excluir()" style="display:none;">
+            </div>
+
+            <label for="InputNome">Nome</label>
+            <input type="text" name="InputNome" id="InputNome">
+            <br>
+
+            <label for="InputTelefone">Telefone</label>
+            <input type="tel" name="InputTelefone" id="InputTelefone">
+            <br>
+
+            <label for="InputEmail">Email</label>
+            <input type="email" name="InputEmail" id="InputEmail">
+            <br>
+
+            <label for="InputSenha">Senha</label>
+            <input type="password" name="InputSenha" id="InputSenha">
+
+            <div class="funcionario">
+                <input type="checkbox" id="checkboxFuncionario" name="checkboxFuncionario" onchange="controlarCargo()">
+                <span id="spanFuncionario">Funcionário</span>
+
+                <select id="cargo_id_cargo" name="cargo_id_cargo" disabled>
+                    <option value="">Selecione um cargo</option>
+                    <option value="1">Gerente</option>
+                    <option value="2">Cozinheiro</option>
+                    <option value="3">Atendente</option>
+                    <option value="4">Caixa</option>
+                    <option value="5">Auxiliar de cozinha</option>
+                </select>
+            </div>
+
+            <div class="cliente">
+                <input type="checkbox" id="checkboxCliente" name="checkboxCliente">
+                <span id="spanCliente">Cliente</span>
+            </div>
+
+            <div id="divAviso"></div>
+
+            <div class="botoes-acao">
+                <input type="button" value="Salvar" id="btSalvar" onclick="salvar()" style="display:none;">
+
+                <input type="button" value="Cancelar" id="btCancelar" onclick="cancelarOperacao()"
+                    style="display:none;">
+            </div>
+
+        </section>
+
+        <section>
+            <h4>Pessoas cadastradas</h4>
+            <div id="outputSaida">Carregando...</div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Yanara Karczetski de Lima — M32A — 2026</p>
+    </footer>
+
+    <script src="pessoa.js"></script>
+
+</body>
+
+</html>

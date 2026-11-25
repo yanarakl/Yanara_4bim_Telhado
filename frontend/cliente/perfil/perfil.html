@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu perfil | Restaurante Ghibli</title>
+
+    <link rel="stylesheet" href="../../base.css">
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+
+    <header class="cabecalho-cliente">
+        <a class="marca" href="../inicio/inicio.html">
+            Restaurante Ghibli
+        </a>
+
+        <nav class="acoes-cabecalho">
+            <a href="../inicio/inicio.html">Início</a>
+            <a href="../carrinho/carrinho.html">Meu carrinho</a>
+            <button type="button" id="botaoLogout">
+                Sair da conta
+            </button>
+        </nav>
+    </header>
+
+    <main class="pagina-perfil">
+
+        <h1>Meu perfil</h1>
+        <p class="subtitulo">
+            Consulte e atualize seus dados pessoais.
+        </p>
+
+        <section class="cartao-perfil">
+
+            <form id="formPerfil">
+
+                <div class="campo">
+                    <label for="nome">Nome completo</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input
+                        type="tel"
+                        id="telefone"
+                        maxlength="11"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        required
+                    >
+                </div>
+
+                <div class="divisor"></div>
+
+                <h2>Alterar senha</h2>
+
+                <p class="aviso">
+                    Deixe em branco caso não queira alterar sua senha.
+                </p>
+
+                <div class="campo">
+                    <label for="senha">Nova senha</label>
+                    <input
+                        type="password"
+                        id="senha"
+                        minlength="6"
+                        placeholder="Digite a nova senha"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="confirmarSenha">Confirmar nova senha</label>
+                    <input
+                        type="password"
+                        id="confirmarSenha"
+                        minlength="6"
+                        placeholder="Digite novamente a senha"
+                    >
+                </div>
+
+                <button type="submit" id="botaoSalvar">
+                    Salvar alterações
+                </button>
+
+                <p id="mensagem" aria-live="polite"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="perfil.js"></script>
+
+</body>
+</html>

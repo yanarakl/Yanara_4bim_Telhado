@@ -1,0 +1,26 @@
+
+.formulario-conta:has(#formCadastro) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.formulario-conta:has(#formCadastro) h2 {
+    margin-bottom: 20px;
+}
+
+.formulario-conta:has(#formCadastro) .campo {
+    margin-bottom: 15px;
+}
+
+.formulario-conta:has(#formCadastro) .campo label {
+    font-size: 24px;
+}
+
+.formulario-conta:has(#formCadastro) .campo input {
+    height: 48px;
+    font-size: 17px;
+}
+
+.formulario-conta:has(#formCadastro) .botao-principal {
+    height: 50px;
+}

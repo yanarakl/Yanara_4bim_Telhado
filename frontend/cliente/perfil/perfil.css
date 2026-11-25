@@ -1,0 +1,93 @@
+
+.pagina-perfil {
+    width: 90%;
+    max-width: 650px;
+    margin: 40px auto;
+}
+
+.pagina-perfil h1 {
+    margin-bottom: 8px;
+}
+
+.subtitulo {
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.cartao-perfil {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+.campo label {
+    font-weight: bold;
+}
+
+.campo input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.campo input:focus {
+    outline: 2px solid #8b6b45;
+    border-color: transparent;
+}
+
+.divisor {
+    height: 1px;
+    background-color: #ddd;
+    margin: 25px 0;
+}
+
+.cartao-perfil h2 {
+    margin-bottom: 8px;
+}
+
+.aviso {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+#botaoSalvar {
+    width: 100%;
+    padding: 13px;
+    background-color: #795c3d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#botaoSalvar:hover {
+    background-color: #60472f;
+}
+
+#botaoSalvar:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#mensagem {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#botaoLogout {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}

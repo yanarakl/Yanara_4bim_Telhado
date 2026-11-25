@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar compra - Restaurante Ghibli</title>
+
+    <link rel="stylesheet" href="../../base.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+    <header class="cabecalho-checkout">
+        <a href="../inicio/inicio.html" class="marca">
+            Restaurante Ghibli
+        </a>
+
+        <a href="../carrinho/carrinho.html">
+            Voltar ao carrinho
+        </a>
+    </header>
+
+    <main class="pagina-checkout">
+        <h1>Finalizar compra</h1>
+
+        <section class="resumo-checkout">
+            <h2>Resumo do pedido</h2>
+            <div id="listaProdutos"></div>
+
+            <div class="linha-total">
+                <span>Total:</span>
+                <strong id="valorTotal">R$ 0,00</strong>
+            </div>
+        </section>
+
+        <section class="pagamento-checkout">
+            <h2>Forma de pagamento</h2>
+
+            <form id="formPagamento">
+                <label for="formaPagamento">
+                    Escolha como deseja pagar:
+                </label>
+
+                <select id="formaPagamento" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="Pix">Pix</option>
+                    <option value="Dinheiro">Dinheiro</option>
+                    <option value="Credito">Cartão de crédito</option>
+                    <option value="Debito">Cartão de débito</option>
+                </select>
+
+                <button type="submit" id="botaoConfirmar">
+                    Confirmar pedido
+                </button>
+            </form>
+
+            <p id="mensagem" role="status"></p>
+        </section>
+    </main>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar | Restaurante Ghibli</title>
+    <link rel="stylesheet" href="../cliente.css">
+</head>
+
+<body>
+
+    <header class="cabecalho-cliente">
+        <a class="marca" href="../inicio/inicio.html">Restaurante Ghibli</a>
+
+        <div class="acoes-cabecalho">
+            <a class="icone-link" href="../inicio/inicio.html">Início</a>
+        </div>
+    </header>
+
+    <main class="pagina-conta">
+
+        <section class="painel-lateral"></section>
+
+        <section class="formulario-conta">
+            <h2>Entrar</h2>
+
+            <form id="formLogin">
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" maxlength="100"
+                        autocomplete="email" required>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha"
+                        autocomplete="current-password" required>
+                </div>
+
+                <button class="botao-principal" id="btEntrar" type="submit">
+                    Entrar
+                </button>
+
+            </form>
+
+            <div id="opcoesPerfil" class="opcoes-perfil" hidden>
+                <div class="conteudo-modal-perfil">
+                    <h2>Como deseja acessar?</h2>
+
+                    <p>Esta conta possui dois perfis. Escolha como deseja continuar:</p>
+
+                    <button type="button" onclick="entrarComo('cliente')">
+                        Acessar como cliente
+                    </button>
+
+                    <button type="button" onclick="entrarComo('funcionario')">
+                        Acessar como funcionário
+                    </button>
+                </div>
+            </div>
+
+            <div id="aviso" class="aviso-form" aria-live="polite"></div>
+
+            <div class="links-form">
+                <p><a href="recuperar-senha.html">Esqueceu sua senha?</a></p>
+                <p>Ainda não tem uma conta? <a href="../cadastro/cadastro.html">Cadastre-se</a></p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="login.js"></script>
+</body>
+
+</html>

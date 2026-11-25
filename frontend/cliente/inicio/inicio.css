@@ -1,0 +1,308 @@
+:root {
+    --vinho: #642a2a;
+    --vinho-escuro: #421b1b;
+    --creme: #fff8dc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: var(--creme);
+    font-family: Georgia, "Times New Roman", serif;
+
+    background-color: #211713;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, .12), rgba(0, 0, 0, .15)),
+        url("../../imagens/fundo-restaurante.png");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* CABEÇALHO */
+
+header {
+    width: 100%;
+    height: 49px;
+    padding: 4px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--vinho);
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 120px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.navegacao a {
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.botaoCarrinho {
+    color: var(--creme);
+    font-size: 17px;
+    padding: 6px;
+}
+
+.botaoLogin,
+.botaoCadastro {
+    padding: 7px 17px;
+    min-height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 25px;
+    background-color: var(--creme);
+    color: #17110d;
+    font-size: 16px;
+}
+
+/* CONTEÚDO */
+
+main {
+    width: 100%;
+    min-height: calc(100vh - 49px);
+    padding-bottom: 25px;
+}
+
+/* Espaço visual antes das categorias */
+
+.apresentacao {
+    height: 145px;
+    padding: 0;
+}
+
+.apresentacao h1,
+.apresentacao p {
+    display: none;
+}
+
+/* CATEGORIAS */
+
+#categorias {
+    width: 100%;
+    padding: 0 4.8% 20px;
+}
+
+.carregando {
+    padding: 15px;
+    font-size: 18px;
+    text-shadow: 1px 2px 4px black;
+}
+
+.categoria {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.categoria h2 {
+    margin: 12px 0 10px;
+    padding-left: 3px;
+
+    color: var(--creme);
+    font-size: 27px;
+    text-shadow: 1px 2px 5px black;
+}
+
+/* CARROSSEL */
+
+.carrossel {
+    width: 100%;
+
+    display: flex;
+    align-items: stretch;
+    gap: 15px;
+
+    padding: 3px 0 10px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #b7a77c #33231d;
+}
+
+.carrossel::-webkit-scrollbar {
+    height: 7px;
+}
+
+.carrossel::-webkit-scrollbar-thumb {
+    background: #b7a77c;
+    border-radius: 10px;
+}
+
+/* CARTÕES DOS PRODUTOS */
+
+.produto {
+    flex: 0 0 145px;
+    width: 145px;
+    min-height: 205px;
+
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+
+    text-align: center;
+
+    color: var(--creme);
+    background: rgba(15, 13, 10, .78);
+
+    border: 1px solid rgba(255, 248, 220, .15);
+    border-radius: 23px;
+
+    box-shadow: 0 4px 13px rgba(0, 0, 0, .35);
+}
+
+.produto img {
+    width: 100%;
+    height: 91px;
+
+    object-fit: cover;
+
+    border-radius: 22px;
+}
+
+.produto h3 {
+    margin: 0;
+    color: var(--creme);
+    font-size: 24px;
+    line-height: 1.1;
+}
+
+.produto p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.produto .preco-produto {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.produto button {
+    min-height: 33px;
+    max-width: 100%;
+
+    padding: 5px 12px;
+
+    border: none;
+    border-radius: 22px;
+
+    background-color: var(--vinho);
+    color: var(--creme);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.produto button:hover {
+    background-color: #803c3c;
+}
+
+/* RODAPÉ */
+
+footer {
+    padding: 14px;
+    text-align: center;
+    background: rgba(45, 20, 18, .9);
+}
+
+footer p {
+    margin: 4px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+    header {
+        padding: 4px 9px;
+        gap: 5px;
+    }
+
+    .logo img {
+        max-width: 90px;
+        height: 32px;
+    }
+
+    .navegacao {
+        gap: 5px;
+    }
+
+    .botaoCarrinho {
+        font-size: 13px;
+    }
+
+    .botaoLogin,
+    .botaoCadastro {
+        padding: 5px 9px;
+        font-size: 12px;
+    }
+
+    .apresentacao {
+        height: 120px;
+    }
+
+    #categorias {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .categoria h2 {
+        font-size: 22px;
+    }
+
+    .produto {
+        flex-basis: 135px;
+        width: 135px;
+        min-height: 195px;
+    }
+
+    .produto h3 {
+        font-size: 21px;
+    }
+}
